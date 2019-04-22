@@ -67,12 +67,6 @@
 			<version>2.6.1</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.15</version>
-		</dependency>
-
 		<!-- log4j2 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
