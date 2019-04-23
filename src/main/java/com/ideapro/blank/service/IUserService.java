@@ -1,11 +1,13 @@
 package com.ideapro.blank.service;
 
 import com.ideapro.blank.model.entity.UserEntity;
+import com.ideapro.blank.model.vo.UserVo;
 
 import java.util.List;
+import java.util.Map;
 
 
-public interface UserService {
+public interface IUserService {
 
     /**
      * 新增
@@ -15,9 +17,9 @@ public interface UserService {
 
     /**
      * 查询
-     * @param entity
-     * @return
+     * @param param
+     * @return List<UserVo>
      */
-    List<UserEntity> query(UserEntity entity);
+    List<UserVo> query(Map<String, Object> param);
 
 }

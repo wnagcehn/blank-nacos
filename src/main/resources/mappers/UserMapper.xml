@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ideapro.blank.repository.UserRepository">
+<mapper namespace="com.ideapro.blank.repository.IUserRepository">
 
     <sql id="BaseSql">
         id, username, password, telephone, email, sign
@@ -13,7 +13,7 @@
         VALUES(#{username}, #{password}, #{telephone}, #{email}, #{sign})
     </insert>
 
-    <select id="query" parameterType="com.ideapro.blank.model.entity.UserEntity" resultType="com.ideapro.blank.model.entity.UserEntity">
+    <select id="query" parameterType="java.util.Map" resultType="com.ideapro.blank.model.entity.UserEntity">
         SELECT
           id,
           username,

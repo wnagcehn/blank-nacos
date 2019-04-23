@@ -65,6 +65,8 @@ spring:
         login-username: admin
         # 登录密码
         login-password: 123456
+       # 合并多个DruidDataSource的监控数据
+        #useGlobalDataSourceStat: true
 
 mybatis:
   configuration:
@@ -80,7 +82,7 @@ mybatis:
   type-aliases-package:
   mapper-locations: classpath:mappers/*.xml
 
-#打印SQL
+# 打印SQL
 logging:
   level:
     com.ideapro.blank.repository: debug
@@ -88,3 +90,10 @@ logging:
 # swagger(生产环境下true改为false)
 swagger:
   enable: true
+
+# pagehelper分页插件
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
