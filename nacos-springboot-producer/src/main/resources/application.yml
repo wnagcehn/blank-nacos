@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /user
+
+spring:
+  application:
+    name: user_service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blank?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+
+nacos:
+  config:
+    server-addr: 127.0.0.1:8848
+  discovery:
+    server-addr: 127.0.0.1:8848
+
